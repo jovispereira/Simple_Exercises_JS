@@ -1,0 +1,27 @@
+<meta charset="UFT-8">
+
+<input>
+<button>Compare com o meu segredo</button>
+
+<script>
+
+	var nMaximo = parseInt(prompt("Você quer adivinhar um número inteiro de 0 a _"));
+	var segredo = Math.round(Math.random() * (nMaximo - 0) + 0);
+	console.log(segredo);
+	var entrada = document.querySelector("input");
+	entrada.focus();
+
+	function verifica() {
+		if(entrada.value == segredo) {
+		alert("Você ACERTOU!");
+			} else {
+			alert("Você ERROU!");
+		}
+		entrada.value = "";
+		entrada.focus();
+	}
+
+	var botao = document.querySelector("button");
+	botao.onclick = verifica;
+
+</script>
