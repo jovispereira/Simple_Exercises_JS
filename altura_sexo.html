@@ -1,0 +1,49 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha() {
+		document.write("<br><br>");
+	}
+
+	function mostra(texto) {
+		document.write(texto)
+		pulaLinha();
+	}
+
+	var sexoM = 0;
+	var sexoF = 0;
+	var alturaMaxima = 0;
+	var sexoAlturaMaxima = "Sexo";
+
+	for(var i = 1; i <= 5; i++) {
+		var sexo = prompt("Digite o sexo da " + i + "ª pessoa (M/F): ");
+
+		if(sexo == "M" || sexo == "F") {
+			if(sexo == "M") {
+				var altura = parseFloat(prompt("Digite a altura da " + i + "ª pessoa: "));
+				sexoM++;
+			} else {
+				var altura = parseFloat(prompt("Digite a altura da " + i + "ª pessoa: "));
+				sexoF++;
+			}
+		} else {
+			alert("Entrada inválida. Digite M para masculino e F para feminino.")
+			i--;
+		}
+		if(altura > alturaMaxima) {
+			alturaMaxima = altura;
+			sexoAlturaMaxima = sexo;
+		}
+	}
+
+	mostra("Quantidade de pessoas do sexo masculino:<b> " + sexoM + "</b>.");
+	mostra("Quantidade de pessoas do sexo feminino:<b> " + sexoF + "</b>.");
+
+	if(sexoAlturaMaxima == "M") {
+		mostra("A maior altura é de<b> " + alturaMaxima + "</b> metros e ela pertence a um homem.");
+	} else {
+		mostra("A maior altura é de<b> " + alturaMaxima + "</b> metros e ela pertence a uma mulher.");
+	}
+
+</script>
