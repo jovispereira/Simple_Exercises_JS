@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha() {
+
+		document.write("<br><hr><br>");
+	  	//<hr> cria uma linha divisória.
+	}
+
+	function mostra(mensagem) {
+
+		document.write("<h1>O problema das gerações</h1>")
+		pulaLinha();
+		document.write("<big>Desde 1500 até o ano atual, se passaram aproximadamente " + mensagem + " gerações.</big>")
+		//<big> aumenta a fonte.
+	}
+
+	var anosQueSePassaram = 2021 - 1500;
+	var quantidadeDeGeracoes = anosQueSePassaram/28;
+
+	mostra(Math.round(quantidadeDeGeracoes));
+	mostra("Eu amo a Lívia Barbara!");
+
+</script>
