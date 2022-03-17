@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha() {
+		document.write("<br><br>");
+	}
+
+	function mostra(texto) {
+		document.write(texto)
+		pulaLinha();
+	}
+
+	var qtdIdades = parseInt(prompt("Quantas idades serão analisadas?"));
+	var maiorDeIdade = 0;
+	var menorDeIdade = 0;
+
+	var contador = 1;
+	while(contador <= qtdIdades) {
+		var idade = parseInt(prompt("Qual a idade da " + contador + "ª pessoa?"));
+		if(idade >= 18) {
+			maiorDeIdade++;
+		} else {
+			menorDeIdade++;
+		}
+		contador++;
+	}
+
+	mostra("O número de pessoas maiores de idade é<b> " + maiorDeIdade + "</b>. Já o número de pessoas menores de idade é<b> "  + menorDeIdade + "</b>.");
+
+</script>
