@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+
+<script>
+	
+	function pulaLinha() {
+		document.write("<br><br>");
+	}
+
+	function mostra(frase) {
+		document.write(frase);
+		pulaLinha();
+	}
+
+	function sorteia(n) {
+		//return Math.random() * (max - min) + min;
+		return Math.round(Math.random() * (n - 0) + 0);
+	}
+
+	var numeroMaximo = parseInt(prompt("Você quer tentar acertar um número de 0 a _"));
+	var numeroPensado = sorteia(numeroMaximo);
+	console.log(numeroPensado);
+
+	var tentativas = 1;
+	while(tentativas <= 3) {
+		var chute = parseInt(prompt("Digite seu chute (um número de 0 a " + numeroMaximo + "): "));
+
+		if(chute == numeroPensado) {
+			mostra("Você acertou! O número pensado era " + "<b>" + chute + "</b>.");
+			break; //tentativas = 3;
+		} else {
+			if(chute > numeroPensado) {
+			mostra("Você errou, o número pensado foi menor do que " + "<b>" + chute + "</b>.");
+			} else {
+				mostra("Você errou, o número pensado foi maior do que " + "<b>" + chute + "</b>.");
+			}
+		}
+		tentativas++;
+	}
+
+	mostra("<hr></hr>");
+
+</script>
