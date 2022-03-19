@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha() {
+
+		document.write("<br><br>");
+	}
+
+	function mostra(texto) {
+
+		document.write(texto);
+		pulaLinha();
+	}
+
+	function calculaMedia(nota1, nota2, nota3) {
+
+		return (nota1 + nota2 + nota3) /3;
+	}
+
+	var nome = prompt("Digite seu nome: ");
+	var n1 = parseFloat(prompt(nome + ", digite a primeira nota: "));
+	var n2 = prompt(nome + ", digite a segunda nota: ");
+	var n3 = parseFloat(prompt(nome + ", digite a terceira nota: "));
+
+	var media = calculaMedia(n1, parseFloat(n2), n3);
+
+	mostra("A média das notas é " + media + ".");
+
+</script>
