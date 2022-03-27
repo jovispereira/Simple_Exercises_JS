@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<script>
+	
+	function pulaLinha() {
+		document.write("<br><br>");
+	}
+
+	function mostra(frase) {
+		document.write(frase);
+		pulaLinha();
+	}
+
+	var nMinimo = 0;
+	var nMaximo = 20;
+
+	while(nMaximo >= nMinimo) { 
+		mostra(nMaximo);
+		nMaximo--;
+	}
+
+	mostra("Fim.");
+
+</script>
