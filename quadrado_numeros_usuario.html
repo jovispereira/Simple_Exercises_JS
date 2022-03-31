@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha() {
+		document.write("<br><br>");
+	}
+
+	function mostra(texto) {
+		document.write(texto)
+		pulaLinha();
+	}
+
+	function calculaQuadrado(numero) {
+		return numero*numero;		
+	}
+
+	var nome = prompt("Qual o seu nome? ");
+	var n1 = parseInt(prompt(nome + ", escreva o primeiro número: "));
+	var n2 = prompt(nome + ", escreva o segundo número: ") * 1;
+	var n3 = parseInt(prompt(nome + ", escreva o terceiro número: "));
+	var n4 = parseInt(prompt(nome + ", escreva o quarto número: "));
+	var n5 = parseInt(prompt(nome + ", escreva o quinto número: "));
+
+	var quadrado1 = calculaQuadrado(n1);
+	var quadrado2 = calculaQuadrado(n2);
+	var quadrado3 = calculaQuadrado(n3);
+	var quadrado4 = calculaQuadrado(n4);
+	var quadrado5 = calculaQuadrado(n5);
+
+	mostra(nome + ", os quadrados dos números informados são, respectivamente, " + quadrado1 + ", " + quadrado2 + ", " + quadrado3 + ", " + quadrado4 + " e " + quadrado5 + ".");
+
+</script>
