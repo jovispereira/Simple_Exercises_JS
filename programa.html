@@ -1,0 +1,51 @@
+<meta charset="UTF-8">
+
+<script>
+	
+	function pulaLinha() {
+
+		document.write("<br><br>");
+	}
+
+	function mostra(frase) {
+
+		document.write(frase);
+		pulaLinha();
+	}
+
+	var ano = 2021;
+	var pularLinha = "<br><br>";
+
+	//document.write("<h1>Seja bem vindo!</h1>");
+
+	mostra("<h1>Seja bem vindo!</h1>");
+
+	mostra("A média das idades é " + (20 + 10 + 30) / 3 + ".");
+
+	document.write("A soma das idades é " + (20 + 10 + 30) + ".");
+
+	var idadeFulano = 20;
+	var idadeCiclano = 10;
+	var idadeBeltrano = 30;
+
+	var media = (idadeFulano+idadeCiclano+idadeBeltrano)/3;
+
+//Exemplo de pulo de linhas com a variável.
+	document.write( pularLinha + "A média das idades é " + Math.round(media) + ".");
+
+	var nome = "Fulano";
+
+	document.write("<br><br>A idade de " + nome + " é " + idadeFulano + ".");
+
+	pulaLinha();
+
+//puLinha() é exemplo de uma função e sua execução.
+
+	document.write("João nasceu em " + (ano - 21) + ".");
+
+//Concatenação é quando somamos dois parâmetros do tipo string ou string mais número.
+
+	document.write("<br><br>Hoje" + 20 + 10 + ".");
+
+//O código sempre lê da esquerda para a direita.
+</script>
